@@ -1,0 +1,14 @@
+<mat-card class="card">
+    <form class="example-form">
+        <p>Add List</p>
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Write Here</mat-label>
+            <input matInput placeholder="Add your list here" name="list" [(ngModel)]="list" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="onClick()">ADD</button>
+    </form>
+</mat-card>
+
+<div class="container">
+    <app-list-data *ngIf="showTodos" (completeEvent)="completed($event)" [dataList]="listData" (itemDelete)="delItem($event)" (clearAllEvent)="delAll($event)" ></app-list-data>
+</div>

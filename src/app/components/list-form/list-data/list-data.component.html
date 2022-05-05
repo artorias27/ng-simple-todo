@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="btn-wrapper">
+    <button mat-raised-button color="primary" *ngIf="dataList.length > 0" (click)="deleteAll()">Clear Finished Todo</button>
+  </div>
+  <mat-card
+    class="card"
+    [ngClass]="{ completedCSS: todo.completeStatus }"
+    *ngFor="let todo of dataList; index as i"
+  >
+    <mat-card-content class="card-content">
+      <mat-chip-list>
+        <span>{{ todo.text }}</span>
+        <mat-chip *ngIf="todo.completeStatus">Done</mat-chip>
+      </mat-chip-list>
+
+      <div class="btnGroup">
+        <button
+          class="editBtn"
+          mat-stroked-button
+          color=""
+          (click)="onComplete(i)"
+        >
+          <mat-icon>assignment_turned_in</mat-icon>
+        </button>
+        <button
+          class="delBtn"
+          mat-stroked-button
+          color=""
+          (click)="onDelete(i)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

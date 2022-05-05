@@ -1,0 +1,70 @@
+.container {
+    max-width: 690px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-wrapper button {
+    margin: 3px 0 7px;
+}
+
+.card {
+    margin: 5px 0 !important;
+}
+
+.completedCSS {
+    border: 0.5px solid #37e431;
+    box-shadow: 4px 3px 3px #37e431;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnGroup button {
+    margin-left: 10px;
+}
+
+.mat-chip {
+    font-size: 0.8rem !important;
+    background-color: #0b9f06;
+    color: #fff;
+    min-height: 22px !important;
+}
+
+span {
+    width: 200px;
+    overflow-wrap: break-word;
+    margin-right: 12px;
+}
+
+.editBtn {
+    border: 1px solid #0b9f06;
+    color: #0b9f06;
+    min-width: 8px !important;
+}
+
+.delBtn {
+    border: 1px solid #f44336;
+    color: #f44336;
+    min-width: 8px !important;
+}
+
+.delBtn mat-icon, .editBtn mat-icon {
+    font-size: 1.1rem;
+    padding-top: 6px;
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        margin: 10px;
+    }
+}
